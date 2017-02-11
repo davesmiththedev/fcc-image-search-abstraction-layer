@@ -3,7 +3,7 @@ by: lah4life
 
 ##User Story: 
 
-I can get a list of the most recently submitted search strings.
+I can get the image URLs, alt text and page urls for a set of images relating to a given search string.
 
 ##User Story: 
 
