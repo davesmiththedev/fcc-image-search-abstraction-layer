@@ -1,5 +1,5 @@
 module.exports = function(app){
     app.get('/', (req,res)=>{
-        res.send('Hello');
+        res.status(200).send('Hello');
     });
 };
