@@ -12,7 +12,7 @@ mongo.connect(dbURL, (err, db)=>{
     console.log('Connection to {' + dbURL + '} SUCCESFUL :)');
   }
   
-  routes(app);
+  routes(app, db);
   
 });
 
