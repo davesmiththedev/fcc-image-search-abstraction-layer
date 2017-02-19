@@ -1,6 +1,7 @@
 'use strict'
 const dbApi = require("../api/search_term_db.js");
 const search = require('../api/search.js');
+const path = require('path');
 
 module.exports = (app, db)=>{
     app.get('/api/latest/imageSearch', (req, res)=>{
@@ -17,6 +18,7 @@ module.exports = (app, db)=>{
     });
     
     app.get('/', (req,res)=>{
-        res.status(200).send('Hello');
+        let fileName = path.resolve(__dirname + '../../../views/home.html');
+        res.status(200).sendFile(fileName);
     });
 };

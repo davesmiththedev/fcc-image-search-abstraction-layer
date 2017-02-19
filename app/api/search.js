@@ -19,7 +19,10 @@ module.exports = (searchTerm, offset, callBack)=>{
             let snippet = item.snippet;
             let thumbnail = item.image.thumbnailLink;
             let context = item.image.contextLink;
-            results.push({'url': url, 'snippet': snippet, 'thumbnail': thumbnail, 'context': context});
+            results.push({  'url': url, 
+                            'snippet': snippet, 
+                            'thumbnail': thumbnail, 
+                            'context': context});
         });
         let JSONresults = JSON.stringify(results);
         callBack(JSONresults);
