@@ -4,7 +4,9 @@ const search = require('../api/search.js');
 
 module.exports = (app, db)=>{
     app.get('/api/latest/imageSearch', (req, res)=>{
-        
+        dbApi.getSearchHistory(db, 10, (searchHistory)=>{
+            res.status(200).send(searchHistory);
+        });
     });
     
     app.get('/api/imageSearch/:search', (req, res)=>{
