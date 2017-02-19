@@ -1,9 +1,16 @@
-const api = require("../api/search_term_db.js");
+'use strict'
+const dbApi = require("../api/search_term_db.js");
+const search = require('../api/search.js');
 
-module.exports = function(app, db){
-    app.get('/:search', (req, res)=>{
-        api.addSearch(db, req.params.search).then((result)=>{
-            res.status(200).send((result) ? 'Added' : 'Not Added');
+module.exports = (app, db)=>{
+    app.get('/api/latest/imageSearch', (req, res)=>{
+        
+    });
+    
+    app.get('/api/imageSearch/:search', (req, res)=>{
+        dbApi.addSearch(db, req.params.search);
+        search(req.params.search, req.query['offset'], (searchResult)=>{
+            res.status(200).send(searchResult); 
         });
     });
     

@@ -1,3 +1,5 @@
+'use strict'
+require('dotenv').config()
 const routes = require('./app/routes/routes.js')
 const express = require("express");
 const app = express();
@@ -10,13 +12,10 @@ mongo.connect(dbURL, (err, db)=>{
     throw new Error('Unable to connect to the database :(');
   }else{
     console.log('Connection to {' + dbURL + '} SUCCESFUL :)');
+    routes(app, db);
   }
-  
-  routes(app, db);
-  
 });
 
 app.listen(port, (req, res)=>{
   console.log('Listening on port ' + port);
 });
-
