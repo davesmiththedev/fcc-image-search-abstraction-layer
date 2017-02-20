@@ -21,4 +21,9 @@ module.exports = (app, db)=>{
         let fileName = path.resolve(__dirname, '../../views/home.html');
         res.status(200).sendFile(fileName);
     });
+    
+    app.use((req, res)=>{
+        let fileName = path.resolve(__dirname, '../../views/home.html');
+        res.status(404).sendFile(fileName);
+    })
 };
