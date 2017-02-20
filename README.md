@@ -15,11 +15,11 @@ I can get a list of the most recently submitted search strings.
 
 ##Example Search usage
 
-https://fcc-image-search-abstraction-layer-lah4lifecloud9.c9users.io/api/imageSearch/books
+https://boiling-dawn-66567.herokuapp.com/api/imageSearch/books
 
 ##Example Search with Offset usage
 
-https://fcc-image-search-abstraction-layer-lah4lifecloud9.c9users.io/api/imageSearch/books?offset=10
+https://boiling-dawn-66567.herokuapp.com/api/imageSearch/books?offset=10
 
 ##Example Search result
 
@@ -27,7 +27,7 @@ https://fcc-image-search-abstraction-layer-lah4lifecloud9.c9users.io/api/imageSe
 
 ##Search History usage
 
-https://fcc-image-search-abstraction-layer-lah4lifecloud9.c9users.io/api/latest/imageSearch/
+https://boiling-dawn-66567.herokuapp.com/api/latest/imageSearch/
 
 ##Example Search History result
 
