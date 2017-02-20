@@ -9,11 +9,11 @@ module.exports = (searchTerm, offset, callBack)=>{
                             searchType: 'image', 
                             num: offset<=10?offset:10}, //Max of 10 results per search
     (err, resp)=> {
-        let results = [];
         if (err) {
             console.log('An error occured', err);
             return;
         }
+        let results = [];
         resp.items.forEach((item)=>{
             let url = item.link;
             let snippet = item.snippet;

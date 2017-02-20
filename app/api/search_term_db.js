@@ -1,7 +1,7 @@
 'use strict'
 module.exports = {
   addSearch: function (db, searchTerm){
-      let newSearch = {search: searchTerm, time: Date()};
+      let newSearch = {search: searchTerm, time: new Date()};
       return db.collection('searches')
         .insert(newSearch)
         .then((response)=>{
