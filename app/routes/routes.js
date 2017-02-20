@@ -18,7 +18,7 @@ module.exports = (app, db)=>{
     });
     
     app.get('/', (req,res)=>{
-        let fileName = path.resolve(__dirname + '../../../views/home.html');
+        let fileName = path.resolve(__dirname, '../../views/home.html');
         res.status(200).sendFile(fileName);
     });
 };
